@@ -39,7 +39,7 @@ class CategoryController extends Controller
     function update(CategoryStoreRequest $request){
 
         try{
-
+            //
             $slug = str_replace(" ", "-", $request->name);
             $slug = str_replace( "/", "-", $slug);
 
