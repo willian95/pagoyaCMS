@@ -1,17 +1,22 @@
 @extends('layouts.login')
 
 @section('content')
+<style>
+.logo-login{
+    width: 160px;
+}
+    </style>
     <div class="login_admin " id="dev-login">
 
         <div class="row">
             <div class="login100-more mask col-md-6"
-                style="background-image: url('login-bg.jpg');">
+                style="background-image: url('https://images.unsplash.com/photo-1587906697341-bfbde76785c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=726&q=80');">
 
 
                <!---- <p>Bienvenido a Aidacaceres CMS</p>--->
             </div>
             <div class="login100-form validate-form col-md-6">
-
+            <img class="logo-login" src="{{ asset('assets/img/logo.svg') }}">
                 <p> Content Management System </p>
 
 
