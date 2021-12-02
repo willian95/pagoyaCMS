@@ -86,7 +86,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
 			<!--begin::Logo-->
 			<a href="{{ url('/') }}">
-				<img alt="Logo" class="w-45px" src="https://www.laliberty.com.co/assets/img/logo1.png" style="filter: invert(1);" />
+				<img alt="Logo" class="w-45px logo-login" src="{{ asset('assets/img/logo.svg') }}"  />
 			</a>
 			<!--end::Logo-->
 			<!--begin::Toolbar-->
@@ -246,8 +246,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
 							<!--begin::Copyright-->
 							<div class="text-dark text-center" style="width: 100%;">
-								<span class="text-muted font-weight-bold mr-2">2020 - 2021©</span>
-								<a href="h#" target="_blank" class="text-dark-75 text-hover-primary">Longitude Copyright</a>
+							<!---	<span class="text-muted font-weight-bold mr-2">2020 - 2021©</span>-->
+								<a href="h#" target="_blank" class="text-dark-75 text-hover-primary">PagoYa Copyright</a>
 							</div>
 							<!--end::Copyright-->
 							<!--begin::Nav-->

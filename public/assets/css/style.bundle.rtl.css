@@ -61824,7 +61824,7 @@ body {
 
 .aside {
   width: 150px;
-  background-color: #1F1E2E; }
+  background-color: #002a46; }
   .aside .aside-menu.ps > .ps__rail-y {
     left: 4px; }
   .aside .aside-menu.ps > .ps__rail-x {
@@ -62601,7 +62601,7 @@ body {
     margin-bottom: 0; } }
 
 .aside-menu {
-  background-color: #1F1E2E ; }
+  background-color: #002a46 ; }
   .aside-menu .menu-nav > .menu-item > .menu-heading .menu-text,
   .aside-menu .menu-nav > .menu-item > .menu-link .menu-text {
     color: #a2a3b7 ; }
@@ -62747,7 +62747,7 @@ body {
       .aside-menu .menu-nav > .menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover > .menu-link .menu-arrow {
         color: #ffffff ; }
   .aside-menu .menu-nav > .menu-item > .menu-arrow {
-    color: #1F1E2E; }
+    color: #002a46; }
   .aside-menu .menu-nav > .menu-section .menu-text {
     color: #4c4e6f ; }
   .aside-menu .menu-nav > .menu-section .menu-icon {
