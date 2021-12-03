@@ -36,7 +36,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script>
 
 			function toggleUserOptions(){
-				
+
 				if($("#user-options-menu").hasClass("show")){
 					$("#user-options-menu").removeClass("show")
 				}else{
@@ -69,7 +69,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				height: 120px;
 				animation: spin 2s linear infinite;
 			}
-			
+
 			@keyframes spin {
 				0% { transform: rotate(0deg); }
 				100% { transform: rotate(360deg); }
@@ -129,7 +129,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="brand flex-column-auto" id="kt_brand">
 						<!--begin::Logo-->
 						<a href="{{ url('/') }}">
-							<img alt="Logo" src="https://www.laliberty.com.co/assets/img/logo1.png" style="filter: invert(1); width: 100px;" />
+
+							<img alt="Logo" src="{{ asset('assets/img/logo-w.svg')}}" style="width: 100%;" />
 						</a>
 					</div>
 					<!--end::Brand-->
@@ -144,6 +145,13 @@ License: You must have a valid license purchased only from themeforest(the above
 									<a href="{{ route('categories.index') }}" class="menu-link">
 										<i class="menu-icon flaticon2-architecture-and-city"></i>
 										<span class="menu-text">Categorías</span>
+									</a>
+								</li>
+
+								<li class="menu-item" aria-haspopup="true">
+									<a href="{{ route('header.index') }}" class="menu-link">
+										<i class="menu-icon flaticon2-architecture-and-city"></i>
+										<span class="menu-text">Header</span>
 									</a>
 								</li>
 
@@ -181,13 +189,6 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-active" aria-haspopup="true">
-									<a href="{{ route('header.index') }}" class="menu-link">
-										<i class="menu-icon flaticon2-architecture-and-city"></i>
-										<span class="menu-text">Header</span>
-									</a>
-								</li>
-								
 							</ul>
 							<!--end::Menu Nav-->
 						</div>
@@ -206,14 +207,14 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
 								<!--begin::Header Menu-->
 								<div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
-									
+
 								</div>
 								<!--end::Header Menu-->
 							</div>
 							<!--end::Header Menu Wrapper-->
 							<!--begin::Topbar-->
 							<div class="topbar">
-								
+
 								<!--begin::User-->
 								<div class="topbar-item">
 									<div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle" onclick="toggleUserOptions()">
@@ -226,9 +227,9 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!--begin::Dropdown-->
 									<div id="user-options-menu" class="dropdown-menu" style="right: 0; float:right !important; left: unset; padding-left: 1rem; padding-bottom: 1rem;">
 										<!--begin:Header-->
-										
+
 											<a href="{{ url('/logout') }}" class="btn btn-success btn-sm font-weight-bold font-size-sm mt-2">Cerrar sesión</a>
-										
+
 										<!--end:Nav-->
 									</div>
 									<!--end::Dropdown-->
@@ -242,9 +243,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--end::Header-->
 					<!--begin::Content-->
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						
+
 						@yield("content")
-						
+
 					</div>
 					<!--end::Content-->
 					<!--begin::Footer-->
@@ -269,9 +270,9 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--end::Page-->
 		</div>
 		<!--end::Main-->
-		
-		
-		
+
+
+
 		<!--begin::Scrolltop-->
 		<div id="kt_scrolltop" class="scrolltop">
 			<span class="svg-icon">

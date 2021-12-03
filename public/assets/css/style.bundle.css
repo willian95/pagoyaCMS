@@ -62709,10 +62709,10 @@ body {
     transition: background-color 0.3s; }
     .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-heading,
     .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-link {
-      background-color: #1b1b28 ; }
+      background-color: #fff ; }
       .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-heading .menu-text,
       .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-link .menu-text {
-        color: #ffffff ; }
+        color: #002a46 ; }
       .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-heading .menu-icon,
       .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-link .menu-icon {
         color: #3699FF ; }
@@ -63232,7 +63232,7 @@ body {
 
 @media (min-width: 992px) {
   .brand {
-    background-color: #181824; }
+    background-color: #002a46; }
     .header-fixed.aside-static .brand {
       position: fixed;
       top: 0;
