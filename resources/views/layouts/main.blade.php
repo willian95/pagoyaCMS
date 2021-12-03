@@ -180,6 +180,13 @@ License: You must have a valid license purchased only from themeforest(the above
 										</ul>
 									</div>
 								</li>
+
+								<li class="menu-item menu-item-active" aria-haspopup="true">
+									<a href="{{ route('header.index') }}" class="menu-link">
+										<i class="menu-icon flaticon2-architecture-and-city"></i>
+										<span class="menu-text">Header</span>
+									</a>
+								</li>
 								
 							</ul>
 							<!--end::Menu Nav-->

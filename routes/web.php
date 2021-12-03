@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DocController;
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\HeaderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +42,12 @@ Route::post("docs/update", [DocController::class, "update"])->name("docs.update"
 Route::get("docs/fetch", [DocController::class, "fetch"])->name("docs.fetch");
 Route::get("docs/edit/{id}", [DocController::class, "edit"])->name("docs.edit");
 
+Route::get("headers", function(){
+
+
+    return view("headers.index");
+
+})->name("header.index");
+
+Route::post("header/update", [HeaderController::class, "store"]);
+Route::post("upload/picture", [FileController::class, "upload"]);
