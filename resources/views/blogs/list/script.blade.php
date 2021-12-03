@@ -5,20 +5,22 @@
         data(){
             return{
 
-                docs:[],
+                blogs:[],
                 links:[],
                 currentPage:"",
-                totalPages:""
+                totalPages:"",
+                linkClass:"page-link",
+                activeLinkClass:"page-link active-link bg-main",
 
 
             }
         },
         methods:{
 
-            async fetch(link = "{{ route('docs.fetch') }}"){
+            async fetch(link = "{{ route('blogs.fetch') }}"){
 
-                let res = await axios.get("{{ route('docs.fetch') }}")
-                this.docs = res.data.data
+                let res = await axios.get("{{ route('blogs.fetch') }}")
+                this.blogs = res.data.data
                 this.links = res.data.links
                 this.currentPage = res.data.current_page
                 this.totalPages = res.data.last_page
@@ -36,7 +38,7 @@
                 .then((willDelete) => {
                     if (willDelete) {
                         this.loading = true
-                        axios.post("{{ route('docs.delete') }}", {id: id}).then(res => {
+                        axios.post("{{ route('blogs.delete') }}", {id: id}).then(res => {
                             this.loading = false
                             if(res.data.success == true){
                                 swal({

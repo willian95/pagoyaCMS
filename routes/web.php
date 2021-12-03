@@ -6,6 +6,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DocController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\HeaderController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\WhatsappPhoneController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +53,14 @@ Route::get("headers", function(){
 
 Route::post("header/update", [HeaderController::class, "store"]);
 Route::post("upload/picture", [FileController::class, "upload"]);
+
+Route::view("blogs/create", "blogs.create.index")->name("blogs.create");
+Route::view("blogs/list", "blogs.list.index")->name("blogs.list");
+Route::post("blogs/store", [BlogController::class, "store"])->name("blogs.store");
+Route::post("blogs/update", [BlogController::class, "update"])->name("blogs.update");
+Route::post("blogs/delete", [BlogController::class, "delete"])->name("blogs.delete");
+Route::get("blogs/fetch", [BlogController::class, "fetch"])->name("blogs.fetch");
+Route::get("blogs/edit/{id}", [BlogController::class, "edit"]);
+
+Route::view("whatsapp/index", "whatsapp.index")->name("whatsapp.index");
+Route::post("/whatsapp/update", [WhatsappPhoneController::class, "update"])->name("whatsapp.update");
