@@ -31,7 +31,7 @@ class DocStoreRequest extends FormRequest
         ];
     }
 
-    public function messags()
+    public function messages()
     {
         return [
             "category.required" => "Categoría es requerida",
