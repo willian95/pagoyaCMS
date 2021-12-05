@@ -22,7 +22,8 @@
                 axios.post("{{ route('docs.store') }}", {
                     category: this.selectedCategory,
                     description: CKEDITOR.instances.editor1.getData(),
-                    title:this.title
+                    title:this.title,
+                    order:this.order
                 }).then(res => {
                     this.loading = false
                     if(res.data.success == true){
