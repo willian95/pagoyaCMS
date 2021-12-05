@@ -52,6 +52,23 @@ class DocController extends Controller
 
     }
 
+    function delete(Request $request){
+
+        try{
+
+            $doc = Doc::find($request->id);
+            $doc->delete();
+
+            return response()->json(["success" => true, "msg" => "Documentación eliminada"]);
+
+        }catch(\Exception $e){
+
+            return response()->json(["success" => true, "msg" => "Ha ocurrido un problema"]);
+
+        }
+
+    }
+
     function fetch(Request $request){
 
         $docs = Doc::with("category")->paginate(20);
