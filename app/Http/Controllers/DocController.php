@@ -25,7 +25,7 @@ class DocController extends Controller
 
         }catch(\Exception $e){
 
-            return response()->json(["success" => true, "msg" => "Ha ocurrido un problema"]);
+            return response()->json(["success" => false, "msg" => "Ha ocurrido un problema"]);
 
         }
 

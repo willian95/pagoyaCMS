@@ -26,7 +26,8 @@ class DocStoreRequest extends FormRequest
         return [
             "category" => "required",
             "title" => "required",
-            "description" => "required"
+            "description" => "required",
+            "order" => "required"
         ];
     }
 
@@ -35,7 +36,8 @@ class DocStoreRequest extends FormRequest
         return [
             "category.required" => "Categoría es requerida",
             "title.required" => "Titulo es requerido",
-            "description.required" => "Descripción es requerida"
+            "description.required" => "Descripción es requerida",
+            "order.required" => "Orden dentro de la categoría es requerido"
         ];
     }
 }
