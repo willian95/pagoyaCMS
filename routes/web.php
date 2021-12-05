@@ -8,6 +8,7 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\HeaderController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\WhatsappPhoneController;
+use App\Http\Controllers\CKEditorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +66,5 @@ Route::get("blogs/edit/{id}", [BlogController::class, "edit"]);
 
 Route::view("whatsapp/index", "whatsapp.index")->name("whatsapp.index");
 Route::post("/whatsapp/update", [WhatsappPhoneController::class, "update"])->name("whatsapp.update");
+
+Route::post("/ckeditor/upload", [CKEditorController::class, "upload"])->name("ckeditor.upload");
