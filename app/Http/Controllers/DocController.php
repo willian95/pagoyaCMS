@@ -18,6 +18,7 @@ class DocController extends Controller
             $doc->category_id = $request->category;
             $doc->description = $request->description;
             $doc->title = $request->title;
+            $doc->order = $request->order;
             $doc->save();
 
             return response()->json(["success" => true, "msg" => "Documentación creada"]);
@@ -38,6 +39,7 @@ class DocController extends Controller
             $doc->category_id = $request->category;
             $doc->description = $request->description;
             $doc->title = $request->title;
+            $doc->order = $request->order;
             $doc->update();
 
             return response()->json(["success" => true, "msg" => "Documentación actualizada"]);

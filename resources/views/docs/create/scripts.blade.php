@@ -28,6 +28,7 @@
                     if(res.data.success == true){
 
                         swal({
+                            order: this.order,
                             title: "Excelente!",
                             text: res.data.msg,
                             icon: "success"
@@ -60,7 +61,17 @@
                 let categories = await axios.get("{{ route('categories.fetch') }}")
                 this.categories = categories.data
 
-            }
+            },
+
+            isNumber(evt) {
+                evt = (evt) ? evt : window.event;
+                var charCode = (evt.which) ? evt.which : evt.keyCode;
+                if ((charCode > 31 && (charCode < 48 || charCode > 57))) {
+                    evt.preventDefault();;
+                } else {
+                    return true;
+                }
+            },
 
         },
         mounted(){

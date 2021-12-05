@@ -58,6 +58,7 @@
                                     <td class="datatable-cell">
                                         <img :src="blog.image" alt="" style="width: 250px;">
                                     </td>
+                                    
                                     <td>
                                         <a class="btn btn-info" :href="'{{ url('/blogs/edit') }}'+'/'+blog.id"><i class="far fa-edit"></i></a>
                                         <button class="btn btn-secondary" @click="erase(blog.id)"><i class="far fa-trash-alt"></i></button>

@@ -41,6 +41,7 @@ Route::view("docs/create", "docs.create.index")->name("docs.create");
 Route::view("docs/list", "docs.list.index")->name("docs.list");
 Route::post("docs/store", [DocController::class, "store"])->name("docs.store");
 Route::post("docs/update", [DocController::class, "update"])->name("docs.update");
+Route::post("docs/delete", [DocController::class, "delete"])->name("docs.delete");
 Route::get("docs/fetch", [DocController::class, "fetch"])->name("docs.fetch");
 Route::get("docs/edit/{id}", [DocController::class, "edit"])->name("docs.edit");
 

@@ -46,6 +46,10 @@
                                     </th>
 
                                     <th class="datatable-cell datatable-cell-sort" style="width: 170px;">
+                                        <span>Orden</span>
+                                    </th>
+
+                                    <th class="datatable-cell datatable-cell-sort" style="width: 170px;">
                                         <span>Acciones</span>
                                     </th>
                                 </tr>
@@ -57,6 +61,9 @@
                                     </td>
                                     <td class="datatable-cell">
                                         @{{ doc.title }}
+                                    </td>
+                                    <td class="datatable-cell">
+                                        @{{ doc.order }}
                                     </td>
                                     <td>
                                         <a class="btn btn-info" :href="'{{ url('/docs/edit') }}'+'/'+doc.id"><i class="far fa-edit"></i></a>

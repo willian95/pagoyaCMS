@@ -84,9 +84,9 @@
                     pictureStatus:"",
                     imageProgress:"",
                     finalPictureName:"",
-                    mainImageFileType:"{{ App\Models\Header::orderBy('id', 'desc')->first()->type }}",
+                    mainImageFileType:"{{ App\Models\Header::orderBy('id', 'desc')->first() ? App\Models\Header::orderBy('id', 'desc')->first()->type : '' }}",
                     picture:"",
-                    imagePreview:"{{ App\Models\Header::orderBy('id', 'desc')->first()->image }}"
+                    imagePreview:"{{ App\Models\Header::orderBy('id', 'desc')->first() ? App\Models\Header::orderBy('id', 'desc')->first()->image : '' }}"
                 }
             },
             methods:{
