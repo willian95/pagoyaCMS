@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="../../../">
 		<meta charset="utf-8" />
-		<title>PagoYa</title>
+		<title>PagoYa CMS</title>
 		<meta name="description" content="User datatable listing" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
@@ -32,7 +32,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
 		<!--<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />-->
-		<link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/img/iso1.png')}}">
+		<link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/img/iso.png')}}">
 		<script>
 
 			function toggleUserOptions(){
@@ -74,6 +74,13 @@ License: You must have a valid license purchased only from themeforest(the above
 				0% { transform: rotate(0deg); }
 				100% { transform: rotate(360deg); }
 			}
+
+			@media (min-width: 992px){
+				.aside .aside-menu .menu-nav > .menu-item > .menu-link {
+					width: 125px !important;
+				}
+			}
+				
 
 		</style>
 
@@ -225,7 +232,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 								<li class="menu-item @if(strpos(url()->current(), 'whatsapp') > -1) menu-item-active @endif" aria-haspopup="true">
 									<a href="{{ route('whatsapp.index') }}" class="menu-link">
-										<i class="menu-icon flaticon2-architecture-and-city"></i>
+										<i class="menu-icon flaticon-whatsapp"></i>
 										<span class="menu-text">Whatsapp #</span>
 									</a>
 								</li>
