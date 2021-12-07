@@ -239,14 +239,14 @@ License: You must have a valid license purchased only from themeforest(the above
 
 								<li class="menu-item @if(strpos(url()->current(), 'registered') > -1) menu-item-active @endif" aria-haspopup="true">
 									<a href="{{ route('registered.index') }}" class="menu-link">
-										<i class="menu-icon flaticon-whatsapp"></i>
-										<span class="menu-text">Clientes internos</span>
+										<i class="menu-icon flaticon-profile-1"></i>
+										<span class="menu-text text-center">Clientes internos</span>
 									</a>
 								</li>
 
 								<li class="menu-item @if(strpos(url()->current(), 'prospects') > -1) menu-item-active @endif" aria-haspopup="true">
 									<a href="{{ route('prospects.index') }}" class="menu-link">
-										<i class="menu-icon flaticon-whatsapp"></i>
+										<i class="menu-icon flaticon-users"></i>
 										<span class="menu-text">Prospectos</span>
 									</a>
 								</li>
