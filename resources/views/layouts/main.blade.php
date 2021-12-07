@@ -237,6 +237,20 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 								</li>
 
+								<li class="menu-item @if(strpos(url()->current(), 'registered') > -1) menu-item-active @endif" aria-haspopup="true">
+									<a href="{{ route('registered.index') }}" class="menu-link">
+										<i class="menu-icon flaticon-whatsapp"></i>
+										<span class="menu-text">Clientes internos</span>
+									</a>
+								</li>
+
+								<li class="menu-item @if(strpos(url()->current(), 'prospects') > -1) menu-item-active @endif" aria-haspopup="true">
+									<a href="{{ route('prospects.index') }}" class="menu-link">
+										<i class="menu-icon flaticon-whatsapp"></i>
+										<span class="menu-text">Prospectos</span>
+									</a>
+								</li>
+
 							</ul>
 							<!--end::Menu Nav-->
 						</div>

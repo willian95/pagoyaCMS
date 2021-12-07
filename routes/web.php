@@ -9,6 +9,8 @@ use App\Http\Controllers\HeaderController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\WhatsappPhoneController;
 use App\Http\Controllers\CKEditorController;
+use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\ProspectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,3 +70,9 @@ Route::view("whatsapp/index", "whatsapp.index")->name("whatsapp.index");
 Route::post("/whatsapp/update", [WhatsappPhoneController::class, "update"])->name("whatsapp.update");
 
 Route::post("/ckeditor/upload", [CKEditorController::class, "upload"])->name("ckeditor.upload");
+
+Route::view("prospects", "prospects.index")->name("prospects.index");
+Route::get("prospects/fetch", [ProspectController::class, "fetch"])->name("prospects.fetch");
+
+Route::view("registered", "registered.index")->name("registered.index");
+Route::get("registered/fetch", [RegisteredUserController::class, "fetch"])->name("registered.fetch");
