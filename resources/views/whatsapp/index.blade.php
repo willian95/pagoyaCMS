@@ -30,6 +30,20 @@
                             </div>
                         </div>
 
+                        {{--<div class="col-md-4">
+                            <div class="form-group">
+                                <label for="title">Número formulario registro</label>
+                                <input type="text" class="form-control" v-model="registerNumber">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="title">Número formulario contacto</label>
+                                <input type="text" class="form-control" v-model="contactNumber">
+                            </div>
+                        </div>--}}
+
                     </div>
 
                     <div class="row">
@@ -63,7 +77,9 @@
                 return{
                     errors:[],
                     loading:false,
-                    number:"{{ App\Models\WhatsappPhoneNumber::first() ? App\Models\WhatsappPhoneNumber::first()->number : '' }}"
+                    number:"{{ App\Models\WhatsappPhoneNumber::first() ? App\Models\WhatsappPhoneNumber::first()->number : '' }}",
+                    registerNumber:"{{ App\Models\WhatsappPhoneNumber::first() ? App\Models\WhatsappPhoneNumber::first()->register_number : '' }}",
+                    contactNumber:"{{ App\Models\WhatsappPhoneNumber::first() ? App\Models\WhatsappPhoneNumber::first()->contact_number : '' }}"
                 }
             },
             methods:{
@@ -78,6 +94,24 @@
 
                         return
                     }
+
+                    /*if(this.registerNumber == ""){
+                        swal({
+                            text: "Número de registro es requerido",
+                            icon: "error"
+                        })
+
+                        return
+                    }
+
+                    if(this.registerNumber == ""){
+                        swal({
+                            text: "Número de contacto es requerido",
+                            icon: "error"
+                        })
+
+                        return
+                    }*/
 
                     this.errors = []
                     this.loading = true

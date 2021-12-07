@@ -32,7 +32,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
 		<!--<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />-->
-		<link rel="shortcut icon" type="image/x-icon" href="http://imgfz.com/i/dDL8cr1.png">
+		<link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/img/iso1.png')}}">
 		<script>
 
 			function toggleUserOptions(){
@@ -141,21 +141,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav">
 
-								<li class="menu-item menu-item-active" aria-haspopup="true">
-									<a href="{{ route('categories.index') }}" class="menu-link">
-										<i class="menu-icon flaticon2-architecture-and-city"></i>
-										<span class="menu-text">Categorías</span>
-									</a>
-								</li>
-
-								<li class="menu-item" aria-haspopup="true">
-									<a href="{{ route('header.index') }}" class="menu-link">
-										<i class="menu-icon flaticon2-architecture-and-city"></i>
-										<span class="menu-text">Header</span>
-									</a>
-								</li>
-
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu @if(strpos(url()->current(), 'docs') > -1) menu-item-active @endif" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<i class="menu-icon flaticon2-pie-chart-2"></i>
 										<span class="menu-text">Documentación</span>
@@ -189,7 +175,14 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item @if(strpos(url()->current(), 'categories') > -1) menu-item-active @endif" aria-haspopup="true">
+									<a href="{{ route('categories.index') }}" class="menu-link">
+										<i class="menu-icon flaticon2-architecture-and-city"></i>
+										<span class="menu-text">Categorías</span>
+									</a>
+								</li>
+
+								<li class="menu-item menu-item-submenu @if(strpos(url()->current(), 'blogs') > -1) menu-item-active @endif" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<i class="menu-icon flaticon2-pie-chart-2"></i>
 										<span class="menu-text">Blog</span>
@@ -223,10 +216,17 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</li>
 
-								<li class="menu-item" aria-haspopup="true">
+								<li class="menu-item @if(strpos(url()->current(), 'headers') > -1) menu-item-active @endif" aria-haspopup="true">
+									<a href="{{ route('header.index') }}" class="menu-link">
+										<i class="menu-icon flaticon2-architecture-and-city"></i>
+										<span class="menu-text">Header</span>
+									</a>
+								</li>
+
+								<li class="menu-item @if(strpos(url()->current(), 'whatsapp') > -1) menu-item-active @endif" aria-haspopup="true">
 									<a href="{{ route('whatsapp.index') }}" class="menu-link">
 										<i class="menu-icon flaticon2-architecture-and-city"></i>
-										<span class="menu-text">whatsapp#</span>
+										<span class="menu-text">Whatsapp #</span>
 									</a>
 								</li>
 

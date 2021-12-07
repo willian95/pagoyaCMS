@@ -14,6 +14,8 @@ class WhatsappPhoneController extends Controller
 
         $phone = new WhatsappPhoneNumber;
         $phone->number = $request->number;
+        $phone->register_number = $request->registerNumber;
+        $phone->contact_number = $request->contactNumber;
         $phone->save();
 
         return response()->json(["success" => true, "msg" => "Teléfono de whatsapp actualizado"]);
