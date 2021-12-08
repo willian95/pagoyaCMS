@@ -73,6 +73,9 @@ Route::post("/ckeditor/upload", [CKEditorController::class, "upload"])->name("ck
 
 Route::view("prospects", "prospects.index")->name("prospects.index");
 Route::get("prospects/fetch", [ProspectController::class, "fetch"])->name("prospects.fetch");
+Route::get("prospects/csv", [ProspectController::class, "downloadCSV"])->name("prospects.downloadCSV");
 
 Route::view("registered", "registered.index")->name("registered.index");
 Route::get("registered/fetch", [RegisteredUserController::class, "fetch"])->name("registered.fetch");
+Route::get("registered/csv", [RegisteredUserController::class, "downloadCSV"])->name("registered.downloadCSV");
+
