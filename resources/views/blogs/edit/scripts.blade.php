@@ -170,7 +170,13 @@
         },
         mounted(){
 
-            CKEDITOR.replace( 'editor1' );
+            let options = {
+                filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
+                filebrowserUploadMethod: 'form',
+                language: "es"
+            }
+
+            CKEDITOR.replace( 'editor1', options );
 
         }
 
