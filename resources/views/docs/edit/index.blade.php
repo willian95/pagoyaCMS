@@ -40,6 +40,14 @@
                             </div>
                         </div>
 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Orden dentro de la categorìa</label>
+                                <input type="text" class="form-control" id="order" v-model="order" @keypress="isNumber($event)">
+                                <small v-if="errors.hasOwnProperty('order')">@{{ errors['order'][0] }}</small>
+                            </div>
+                        </div>
+
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="description">Descripción</label>

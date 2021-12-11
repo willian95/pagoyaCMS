@@ -11,7 +11,8 @@
                 selectedCategory:"{{ $doc->category_id }}",
                 title:"{{ $doc->title }}",
                 errors:[],
-                loading:false
+                loading:false,
+                order:"{{ $doc->order }}"
 
             }
         },
@@ -25,6 +26,7 @@
                     category: this.selectedCategory,
                     title: this.title,
                     description: CKEDITOR.instances.editor1.getData(),
+                    order:this.order
                 }).then(res => {
                     this.loading = false
                     if(res.data.success == true){
