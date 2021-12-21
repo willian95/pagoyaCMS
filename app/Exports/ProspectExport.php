@@ -21,7 +21,7 @@ class ProspectExport implements FromQuery, WithHeadings
         return [
             'Nombre',
             'Email',
-            'Teléfono',
+            'Telefono',
             'Cargo',
             'Pregunta'
         ];
